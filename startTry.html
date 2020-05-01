@@ -7,6 +7,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Zadanie 2 - przemieszczenie kwadratu</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            position: absolute;
+            width: 120px;
+            padding: 5px 0;
+            top: 30px;
+            left: calc(50% - 60px);
+            border: 2px solid black;
+            color: black;
+            background-color: #fff;
+            transition: .3s;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .square {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            transition: left .5s, top .5s .5s, width .4s .6s, height .4s .6s;
+        }
+
+        button:hover+.square {
+
+            width: 100px;
+            height: 100px;
+            top: calc(100% - 100px);
+            left: calc(100% - 100px);
+        }
     </style>
 </head>
 
